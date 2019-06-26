@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Angular 8</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <h2 style="font-size: 250%;"><span style="color: #aaccaa">Angular 8</span></h2>
+        <h4 style="color: #66aaff">By Rob Pocklington</h4>
+      </section>
+      <section><br>
+        <h2 style="color: #ddcc88">Breakdown</h2>
+        <li style="height: 10px"></li>
+        <li><b>Somewhat interesting stuff</b><br>Typescript 3.4 + Misc. bits</li>
+        <li style="height: 10px"></li>
+        <li><b>Cool stuff</b><br>Differential Loading + Ivy (opt-in)</li>
+        <li style="height: 10px"></li>
+        <li><b>Boring stuff</b><br>Deprecations + Upgrade Notes</li>
+        <li></li>
+      </section>
+      <section>
+        <li>
+          <h2>Typescript 3.4</h2>
+        </li>
+        <li></li>
+        <li>TLDR;<br><br></li>
+        <li>Set <code>tsconfig.json -> compilerOptions -> incremental: true</code><br><br>for faster type-checking</li>
+      </section>
+      <section>
+        <li>
+          <h2>Misc. bits</h2>
+        </li>
+        <li></li>
+        <li>Better lazy-loaded module imports</li>
+        <li>Easier generation and building of web workers</li>
+        <li>Bazel (opt-in)</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </section>
+      <section>
+        <li>
+          <h2 style="color: #cc88aa">Differential Loading<br></h2>
+        </li>
+        <li></li><img src="images/diff-loading.png" width="400" style="border-radius: 5px" class="right">
+      </section>
+      <section>
+        <h2 style="color: #cc88aa">Ivy<br><br></h2><img src="images/ivy.png" width="450" style="border-radius: 5px" class="right">
+      </section>
+      <section>
+        <h2 style="color: #cc88aa">Ivy (cont ...)</h2>
+        <li></li>
+        <li><b>ng new ivy-project --enable-ivy</b>&nbsp;&nbsp;<br><br>or<br><br></li>
+        <li><code>tsconfig.app.json -> angularCompilerOptions -> enableIvy: true</code></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </section>
+      <section>
+        <h2 style="color: #cc88aa">Deprecations / Upgrade Notes</h2>
+        <li></li>
+        <li><code>@angular/http</code> package is gone! (aka <code>HttpModule</code>)</li>
+        <li>Replace with <code>@angular/common/http</code> instead <br>(aka <code>HttpClientModule</code>)<br><br></li>
+        <li>Consider using Node v12.1+</li>
+        <li></li>
+      </section>
+      <section>
+        <h2 style="color: #aa99ff">Links<br><br></h2><a href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html">Typescript 3.4 Release Notes</a>
+        <a href="https://bazel.angular.io/">Bazel</a>
+        <a href="https://auth0.com/blog/angular-8-differential-loading/">Differential Loading</a>
+        <a href="https://blog.angularindepth.com/all-you-need-to-know-about-ivy-the-new-angular-engine-9cde471f42cf">All about Ivy</a>
+        <a href="https://www.techiediaries.com/updating-angular-cli-projects/">NG8 Upgrade Summary</a>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
