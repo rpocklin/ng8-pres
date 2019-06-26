@@ -1,0 +1,93 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Angular 8
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+    article
+      section
+        h2(style="font-size: 250%;")
+          span(style="color: #aaccaa") Angular 8
+        h4(style="color: #66aaff") By Rob Pocklington
+
+      section
+        br
+        h2(style="color: #ddcc88") Breakdown
+        li(style="height: 10px")
+        li <b>Somewhat interesting stuff</b><br>Typescript 3.4 + Misc. bits
+        li(style="height: 10px")
+        li <b>Cool stuff</b><br>Differential Loading + Ivy (opt-in)
+        li(style="height: 10px")
+        li <b>Boring stuff</b><br>Deprecations + Upgrade Notes
+        li
+
+      section
+        li
+          h2 Typescript 3.4
+        li
+        li TLDR;<br><br>
+        li Set <code>tsconfig.json -> compilerOptions -> incremental: true</code><br><br>for faster type-checking
+
+      section
+        li
+          h2 Misc. bits
+        li
+        li Better lazy-loaded module imports
+        li Easier generation and building of web workers
+        li Bazel (opt-in)
+        li
+        li
+        li
+
+      section
+        li
+          h2(style="color: #cc88aa") Differential Loading<br>
+        li
+        img.right(src="images/diff-loading.png" width="400" style="border-radius: 5px")
+
+      section
+        h2(style="color: #cc88aa") Ivy<br><br>
+        img.right(src="images/ivy.png" width="450" style="border-radius: 5px")
+
+      section
+        h2(style="color: #cc88aa") Ivy (cont ...)
+        li
+        li <b>ng new ivy-project --enable-ivy</b>&nbsp;&nbsp;<br><br>or<br><br>
+        li <code>tsconfig.app.json -> angularCompilerOptions -> enableIvy: true</code>
+        li
+        li
+        li
+
+        //- li on a micro app, save 96k off legacy main JS or 52k off modern main JS. [aot + prod builds]
+
+      section
+        h2(style="color: #cc88aa") Deprecations / Upgrade Notes
+        li
+        li <code>@angular/http</code> package is gone! (aka <code>HttpModule</code>)
+        li Replace with <code>@angular/common/http</code> instead <br>(aka <code>HttpClientModule</code>)<br><br>
+        li Consider using Node v12.1+
+        li
+
+      section
+        h2(style="color: #aa99ff") Links<br><br>
+        <a href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html">Typescript 3.4 Release Notes</a>
+        <a href="https://bazel.angular.io/">Bazel</a>
+        <a href="https://auth0.com/blog/angular-8-differential-loading/">Differential Loading</a>
+        <a href="https://blog.angularindepth.com/all-you-need-to-know-about-ivy-the-new-angular-engine-9cde471f42cf">All about Ivy</a>
+        <a href="https://www.techiediaries.com/updating-angular-cli-projects/">NG8 Upgrade Summary</a>
+
+    script(src='build/build.js')
+
+//- before starting - loading up the following screens
+
+//- CHROME
+//- https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html
+//- view source of index.html (rates-ui) for diff loading example
+
+//- ITERM
+//- run rates + rates-ui
+//- /projects/btc/dist-standard
+//- /projects/btc/dist-ivy [ split screen cmd+D]
